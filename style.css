@@ -13,7 +13,7 @@ html, body {
     height: 100%; /* Ensure html and body take full height */
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling on body */
+    /* overflow: hidden;  Remove this to allow scrolling on mobile */
     -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
     touch-action: manipulation; /* Prevent double-tap zoom and improve touch response */
     -webkit-font-smoothing: antialiased; /* Improve text rendering */
@@ -559,121 +559,27 @@ button:disabled { background-color: #7f8c8d; color: #bdc3c7; cursor: not-allowed
     #message-row { flex-direction: column; }
     #message-log, #backpack-container { min-width: unset; }
 }
-@media (max-width: 600px) { /* Smaller Tablet / Large Mobile */
-     .stats-block, #inventory-display { flex-basis: 100%; max-width: none; } /* Stack top 3 columns */
-     #player-stats, #inventory-display, #enemy-stats { order: 0; } /* Reset order */
-     .item-comparison-container { flex-direction: column; } /* Stack comparison boxes */
-     #equipment-row { flex-direction: column; align-items: center; }
-     .equip-slot { min-width: 150px; }
-     #message { height: 120px; } /* Further reduce message height */
-     #start-screen { padding: 15px; }
-     h1 { font-size: 1.6em; }
-     #character-selection label { font-size: 1em; margin: 0 5px;}
-     #character-selection input[type="radio"] { transform: scale(1.0); }
-     button { padding: 8px 15px; font-size: 0.9em; }
-     #start-game-button { font-size: 1em; }
-     #player-stats { padding-top: 10px; }
-     #player-stats h2 { margin-top: 5px; }
-     #player-stats p { font-size: 0.9em; }
-     #backpack-grid { grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); gap: 5px; }
-     .backpack-slot { width: 50px; height: 50px; }
-     body {
-        font-size: 14px; /* Base font size for mobile */
-    }
-
-    #game-area {
-        padding: 5px;
-        gap: 5px;
-    }
-
-    .stats-block, #inventory-display {
-        padding: 8px;
-        min-width: 100%;
-    }
-
-    #player-stats, #enemy-stats {
-        flex-basis: 100%;
-        margin-bottom: 5px;
-    }
-
-    #inventory-display {
-        order: 2;
-        margin-top: 5px;
-    }
-
-    #message-row {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    #message {
-        height: 100px;
-        font-size: 0.9em;
-    }
-
-    #backpack-container {
-        margin-top: 5px;
-    }
-
-    #backpack-grid {
-        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
-        gap: 4px;
-    }
-
-    .backpack-slot {
-        width: 40px;
-        height: 40px;
-    }
-
-    #actions {
-        padding: 5px;
-        gap: 5px;
-    }
-
-    #actions button {
-        padding: 8px 12px;
-        font-size: 0.85em;
-        min-width: 80px;
-    }
-
-    .equip-slot {
-        min-width: 120px;
-        padding: 5px;
-    }
-
-    #top-controls {
-        flex-wrap: wrap;
-        gap: 5px;
-    }
-
-    #top-controls button {
-        padding: 6px 10px;
-        font-size: 0.8em;
-    }
-
-    #start-screen {
-        padding: 15px;
-        margin: 10px;
-        max-height: 95vh;
-    }
-
-    #character-selection {
-        margin-bottom: 15px;
-    }
-
-    #character-selection label {
-        display: block;
-        margin: 5px 0;
-    }
-
-    .placeholder-section {
-        padding: 8px;
-    }
-
-    #start-controls button {
-        width: 100%;
-        margin: 5px 0;
-    }
+@media (max-width: 600px) {
+    /* Smaller Tablet / Large Mobile */
+    .stats-block, #inventory-display { flex-basis: 100%; max-width: none; }
+    #player-stats, #inventory-display, #enemy-stats { order: 0; }
+    .item-comparison-container { flex-direction: column; }
+    #equipment-row { flex-direction: column; align-items: center; }
+    .equip-slot { min-width: 120px; }
+    #message { height: 90px; }
+    #start-screen { padding: 8px; }
+    h1 { font-size: 1.2em; }
+    #character-selection label { font-size: 0.95em; margin: 0 3px;}
+    #character-selection input[type="radio"] { transform: scale(0.95); }
+    button { padding: 6px 10px; font-size: 0.85em; }
+    #start-game-button { font-size: 0.95em; }
+    #player-stats { padding-top: 5px; }
+    #player-stats h2 { margin-top: 3px; }
+    #player-stats p { font-size: 0.85em; }
+    #backpack-grid { grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); gap: 3px; }
+    .backpack-slot { width: 40px; height: 40px; }
+    body { padding: 0; }
+    #game-area { padding: 4px; }
 }
 
 /* Small mobile devices */
