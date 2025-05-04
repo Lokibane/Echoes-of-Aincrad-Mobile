@@ -60,7 +60,15 @@
                     <p>Crit Damage: <span id="player-crit-damage">150</span>%</p>
                     <p>Damage: <span id="player-min-dmg">7</span> - <span id="player-max-dmg">12</span></p>
                 </div>
-
+                <div id="actions">
+                    <button id="horizontal-button">Horizontal<br>Strike</button>
+                    <button id="horizontal-arc-button" class="skill-button hidden">Horizontal Arc</button>
+                    <button id="horizontal-square-button" class="skill-button hidden">Horizontal Square</button>
+                    <button id="deadly-sins-button" class="skill-button hidden">Deadly Sins</button>
+                    <button id="evasion-button">Evasion</button>
+                    <button id="first-aid-button">First Aid</button>
+                    <button id="flee-button" class="flee-button hidden">Flee</button>
+                </div>
                 <div id="inventory-display" class="stats-block">
                     <div class="inventory-section"> <h3>Equipped</h3>
                         <div id="inventory-equipped-weapon" class="equipped-item-slot">
@@ -106,7 +114,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div id="enemy-stats" class="stats-block">
                      <img id="enemy-image" src="Images/boar.jpg" alt="Enemy Character" onerror="this.onerror=null; this.src='https://placehold.co/80x80/2c3e50/ecf0f1?text=Enemy';">
                      <h2 id="enemy-name">Enemy</h2> <span class="debuff-indicator" id="enemy-debuff-indicator"></span>
@@ -138,18 +145,7 @@
                          </div>
                  </div>
             </div>
-            <div class="game-row" id="action-row">
-                <div id="actions">
-                    <button id="horizontal-button">Horizontal<br>Strike</button>
-                    <button id="horizontal-arc-button" class="skill-button hidden">Horizontal Arc</button>
-                    <button id="horizontal-square-button" class="skill-button hidden">Horizontal Square</button>
-                    <button id="deadly-sins-button" class="skill-button hidden">Deadly Sins</button>
-                    <button id="evasion-button">Evasion</button>
-                    <button id="first-aid-button">First Aid</button>
-                    <button id="flee-button" class="flee-button hidden">Flee</button>
-                </div>
-            </div>
-            </div>
+        </div>
      </div>
      <div id="tooltip" class="tooltip hidden"></div>
      <div id="victory-notification"></div>
