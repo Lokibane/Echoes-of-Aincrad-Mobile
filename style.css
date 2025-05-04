@@ -560,26 +560,60 @@ button:disabled { background-color: #7f8c8d; color: #bdc3c7; cursor: not-allowed
     #message-log, #backpack-container { min-width: unset; }
 }
 @media (max-width: 600px) {
-    /* Smaller Tablet / Large Mobile */
-    .stats-block, #inventory-display { flex-basis: 100%; max-width: none; }
-    #player-stats, #inventory-display, #enemy-stats { order: 0; }
-    .item-comparison-container { flex-direction: column; }
-    #equipment-row { flex-direction: column; align-items: center; }
-    .equip-slot { min-width: 120px; }
-    #message { height: 90px; }
-    #start-screen { padding: 8px; }
-    h1 { font-size: 1.2em; }
-    #character-selection label { font-size: 0.95em; margin: 0 3px;}
-    #character-selection input[type="radio"] { transform: scale(0.95); }
-    button { padding: 6px 10px; font-size: 0.85em; }
-    #start-game-button { font-size: 0.95em; }
-    #player-stats { padding-top: 5px; }
-    #player-stats h2 { margin-top: 3px; }
-    #player-stats p { font-size: 0.85em; }
-    #backpack-grid { grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); gap: 3px; }
-    .backpack-slot { width: 40px; height: 40px; }
-    body { padding: 0; }
-    #game-area { padding: 4px; }
+    #game-screen, #game-area {
+        width: 100vw;
+        max-width: 100vw;
+        min-width: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .game-row {
+        flex-direction: column !important;
+        gap: 4px;
+        width: 100vw;
+        min-width: 0;
+        max-width: 100vw;
+        box-sizing: border-box;
+    }
+    .stats-block, #inventory-display {
+        min-width: 0;
+        max-width: 100vw;
+        width: 100%;
+        margin-bottom: 4px;
+        padding: 6px;
+        box-sizing: border-box;
+    }
+    #equipment-row {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 4px 0;
+    }
+    #message-row {
+        flex-direction: column;
+        gap: 4px;
+    }
+    #actions {
+        grid-template-columns: 1fr 1fr;
+        gap: 4px;
+        width: 100%;
+    }
+    #actions button {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        font-size: 0.9em;
+        padding: 8px 0;
+    }
+    .equipped-item-slot {
+        padding: 3px;
+    }
+    .equipped-item-slot img {
+        width: 22px;
+        height: 22px;
+    }
+    .item-name {
+        font-size: 0.8em;
+    }
 }
 
 /* Small mobile devices */
